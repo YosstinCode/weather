@@ -1,6 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+
+const rulesForImages = {
+  test: /\.(png|svg|jpg|jpeg|gif)$/i,
+  type: 'asset/resource',
+};
+
 const rulesForStyle = {
   test: /\.css$/,
   use: ["style-loader", "css-loader"], // style-loader: cuando encuentra el import en el js lee el style
@@ -8,7 +14,7 @@ const rulesForStyle = {
 };
 
 const rulesForJS = {
-  test: /\.(js|jsx)$/, // aqui indicamos los archivos que webpack no entiende
+  test: /\.js$/, // aqui indicamos los archivos que webpack no entiende
   loader: "babel-loader", //le indicamos porque cargador debe pasar
   options: {
     //aqui indicamos una configuracion de babel para react.
@@ -24,7 +30,7 @@ const rulesForJS = {
   },
 };
 
-const rules = [rulesForJS, rulesForStyle];
+const rules = [rulesForJS,rulesForStyle,rulesForImages];
 
 module.exports = (env, argv) => {
   const { mode } = argv;
