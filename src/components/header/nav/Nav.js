@@ -1,5 +1,5 @@
-import SearchPlaceButton from "../SearchPlaceButton/SearchPlaceButton"
-import UbicationButton from "../UbicationButton/UbicationButton"
+import SearchPlaceButton from "../searchPlaceButton/SearchPlaceButton"
+import UbicationButton from "../ubicationButton/UbicationButton"
 import { NavStyle } from "./style"
 
 const Nav = () => {

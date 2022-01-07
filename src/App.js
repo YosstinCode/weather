@@ -1,12 +1,11 @@
-import Nav from "./components/header/Nav/Nav";
-import { SearchPlaceButton } from "./components/header/SearchPlaceButton/SearchPlaceButton";
-import { HeaderStyle } from "./components/header/style";
-import UbicationButton from "./components/header/UbicationButton/UbicationButton";
 import {GlobalStyle} from "./GlobalStyle"
+import Header from "./components/header/Header"
+import Main from "./components/main/Main"
 
 export default function App() {
     return (<>
         <GlobalStyle/>
-        <HeaderStyle />
+        <Header />
+        <Main/>
     </>)
 }

@@ -2,7 +2,9 @@ import styled from "styled-components"
 import { Theme } from "../../Theme"
 
 export const HeaderStyle = styled.header`
-    width: 100%;
-    height: 90vh;
-    background: ${Theme.color.purple};
+    background:  ${Theme.color.purple} ;
+    width: 100%; //23.4375rem
+    height: 100%;
+    background-size: 150%;
+    padding:1rem 0;
 `

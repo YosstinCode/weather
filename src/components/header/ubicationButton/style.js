@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import icon from "../../../assets/Ubication.svg"
+import icon from "../../../../public/assets/Ubication.svg"
 import { Theme } from "../../../Theme"
 
 export const UbicationButtonStyle = styled.button`

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
 const rulesForImages = {
-  test: /\.(png|svg|jpg|jpeg|gif)$/i,
+  test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
   type: 'asset/resource',
 };
 
@@ -43,13 +43,16 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, "build"),
     },
     //aqui agregamos los plugin los plugins le agregan a webpack una nueva funcionalidad.
-    plugins: [new HtmlWebpackPlugin({ template: "src/index.html" })],
+    plugins: [new HtmlWebpackPlugin({ template: "src/index.html",favicon: './public/assets/Favicon.ico' })],
     //aqui configuramos los loaders
     module: {
       rules,
     },
     //config server webpack
     devServer: {
+      static: { //servir estaticos
+        directory: path.join(__dirname, 'public'),
+      },
       open: true, // abrir navegador
       port: 3000, //puerto
       compress: true, //ni idea se supone que gzip
